@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Main home page from where user redirects to the game page -->
+    <div id="homepage">
+        <h1> <span class="yellow">X</span> <span class="green">O</span> </h1>
+        <div id="options">
+            <p>PICK PLAYER 1'S MARK</p>
+            <div id="sliderButton">
+                <div class="option active" id="opt1">X</div>
+                <!-- second x which can be seen when the first x is slided to that side -->
+                <span id="xClone">X</span>
+                <div class="option" id="opt2" style=" position: relative; right: 2vw;">O</div>
+            </div>
+            <p style="color: #070b0d; font-weight: bolder; letter-spacing: 0.3vw;">Remember X Always Comes First</p>
+        </div>
+        <div id="aiOrPlayer">
+            <button class="yellowbg btn" style="box-shadow: 0px 8px #8f6310; " id="player" >NEW GAME(Vs Player)</button>
+            <button class="greenbg  btn" style="box-shadow: 0px 8px #0e6763;"  id="ai" >NEW GAME(Vs CPU)</button>
+        </div>
+    </div>
+    <!-- main game -->
+    <div id="game" class="none">
+        <nav>
+            <p style="font-weight: bolder;" ><span class="yellow">X</span>   <span class="green">O</span></p>
+            <p id="turn" style="font-size: 0.8em;"><span id="turnSpan" style="font-size: 1.2em; font-weight: bolder; color: #fff;"> </span>TURN</p>
+            <div id="reset">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+        </nav>
+        <!-- 9 boxes -->
+        <div id="gamepad">
+            <div class="row">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+            <div class="row">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+            <div class="row">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <div id="points">
+            <div class="player"></div>
+            <div class="tie"></div>
+            <div class="secondPlayer"></div>
+        </div>
+        <!-- Popup that comes on winning  -->
+        <div id="winner" class="boxInactive">
+            <p id="text"></p>
+            <button id="quit" class="greenbg" style="box-shadow: 0px 8px #0e6763; font-family: system-ui; font-weight:100">QUIT</button>
+            <button id="next-round" class="yellowbg"  style="box-shadow: 0px 8px #8f6310; font-family: system-ui; font-weight:100 ">NEXT ROUND</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

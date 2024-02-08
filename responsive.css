@@ -1,0 +1,26 @@
+@media(max-width:500px){
+    #options{
+        width:90vw;
+        height:30vh;
+    }
+    #sliderButton{
+        width:80vw;
+    }
+    .active2{
+        transform:translateX(19vw);
+        color:#a8bec9;
+        z-index: 1;
+    }
+    button{
+        width:70vw;
+    }
+    .box{
+        width:25vw;
+    }
+    #turn{
+        width:15vw;
+    }
+    #reset{
+        width:15vw;
+    }
+}
